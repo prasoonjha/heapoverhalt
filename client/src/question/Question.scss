@@ -1,0 +1,35 @@
+.answer {
+    &__created-at {
+        font-size: 0.85rem;
+        font-weight: 400;
+        padding-left: 0.5rem;
+    }
+
+    &__body {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+}
+
+.vote {
+    align-items: center;
+    display: grid;
+    column-gap: 0.5rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        'upvote count'
+        'downvote count';
+
+    &__up {
+        grid-area: upvote;
+    }
+
+    &__down {
+        grid-area: downvote;
+    }
+
+    &__count {
+        grid-area: count;
+    }
+}
